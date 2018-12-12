@@ -144,7 +144,7 @@
         </div>
         <div class="col-4">
         <p><label class="font-weight-bold">Téléphone :</label>
-        <input type="text" name="phone" class="form-control" minlength="10" maxlength="10" value="<?= htmlspecialchars($_POST['phone']); ?>" required/></p>
+        <input type="tel" name="phone" class="form-control" minlength="10" maxlength="10" value="<?= htmlspecialchars($_POST['phone']); ?>" required/></p>
         </div>
       </div>
       <div class="row">
@@ -172,11 +172,11 @@
       <p><label class="font-weight-bold">Lien codecademy :</label>
       <input type="text" name="codecademy" class="form-control" value="<?= htmlspecialchars($_POST['codecademy']); ?>" required/></p>
       <p class="text-center"><label class="font-weight-bold">Si vous étiez un super héros/une super héroïne, qui seriez-vous et pourquoi?</label></p>
-      <p class="text-center"><textarea name="heroes" rows="8" cols="166" required><?php if(isset($_POST['heroes'])) { echo htmlentities($_POST['heroes']); } ?></textarea></p>
+      <p class="text-center"><textarea name="heroes" rows="8" cols="166" required><?php if(isset($_POST['heroes'])) { echo htmlspecialchars($_POST['heroes']); } ?></textarea></p>
       <p class="text-center"><label class="font-weight-bold">Racontez-nous un de vos "hacks" (pas forcément technique ou informatique)</label></p>
-      <p class="text-center"><textarea name="hacks" rows="8" cols="166" required><?php if(isset($_POST['hacks'])) { echo htmlentities($_POST['hacks']); } ?></textarea></p>
+      <p class="text-center"><textarea name="hacks" rows="8" cols="166" required><?php if(isset($_POST['hacks'])) { echo htmlspecialchars($_POST['hacks']); } ?></textarea></p>
       <p class="text-center"><label class="font-weight-bold">Avez vous déjà eu une expérience avec la programmation et/ou l'informatique avant de remplir ce formulaire ?</label></p>
-      <p class="text-center"><textarea name="experience" rows="8" cols="166" required><?php if(isset($_POST['experience'])) { echo htmlentities($_POST['experience']); } ?></textarea></p>
+      <p class="text-center"><textarea name="experience" rows="8" cols="166" required><?php if(isset($_POST['experience'])) { echo htmlspecialchars($_POST['experience']); } ?></textarea></p>
       <input type="submit" name="submit" value="Envoyer le formulaire" class="btn btn-primary"/>
     </form>
     </div>
